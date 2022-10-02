@@ -1,0 +1,62 @@
+|Q1
+a[0] => fa:fa0.a
+a[1] => fa:fa1.a
+a[2] => fa:fa2.a
+a[3] => fa:fa3.a
+b[0] => bi[0].IN0
+b[1] => ~NO_FANOUT~
+b[2] => ~NO_FANOUT~
+b[3] => ~NO_FANOUT~
+cin => bi[0].IN1
+cin => fa:fa0.c
+s[0] <= fa:fa0.sum
+s[1] <= fa:fa1.sum
+s[2] <= fa:fa2.sum
+s[3] <= fa:fa3.sum
+cv <= fa:fa3.cv
+
+
+|Q1|fa:fa0
+a => sum.IN0
+a => cv.IN0
+b => sum.IN1
+b => cv.IN1
+c => sum.IN1
+c => cv.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cv <= cv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Q1|fa:fa1
+a => sum.IN0
+a => cv.IN0
+b => sum.IN1
+b => cv.IN1
+c => sum.IN1
+c => cv.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cv <= cv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Q1|fa:fa2
+a => sum.IN0
+a => cv.IN0
+b => sum.IN1
+b => cv.IN1
+c => sum.IN1
+c => cv.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cv <= cv.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Q1|fa:fa3
+a => sum.IN0
+a => cv.IN0
+b => sum.IN1
+b => cv.IN1
+c => sum.IN1
+c => cv.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cv <= cv.DB_MAX_OUTPUT_PORT_TYPE
+
+
