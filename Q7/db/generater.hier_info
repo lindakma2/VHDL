@@ -1,0 +1,36 @@
+|generater
+input => D_flip_flop:G1:0:FA.Din
+clk1 => D_flip_flop:G1:3:FA.clk
+clk1 => D_flip_flop:G1:2:FA.clk
+clk1 => D_flip_flop:G1:1:FA.clk
+clk1 => D_flip_flop:G1:0:FA.clk
+Q[0] <= D_flip_flop:G1:0:FA.Q
+Q[1] <= D_flip_flop:G1:1:FA.Q
+Q[2] <= D_flip_flop:G1:2:FA.Q
+Q[3] <= D_flip_flop:G1:3:FA.Q
+
+
+|generater|D_flip_flop:\G1:3:FA
+clk => Q~reg0.CLK
+Din => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|generater|D_flip_flop:\G1:2:FA
+clk => Q~reg0.CLK
+Din => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|generater|D_flip_flop:\G1:1:FA
+clk => Q~reg0.CLK
+Din => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|generater|D_flip_flop:\G1:0:FA
+clk => Q~reg0.CLK
+Din => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
