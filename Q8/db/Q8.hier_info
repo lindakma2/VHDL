@@ -1,0 +1,48 @@
+|Q8
+load => andline[1].IN0
+load => andline[3].IN0
+load => andline[5].IN0
+load => andline[7].IN0
+load => andline[0].IN0
+load => andline[2].IN1
+load => andline[4].IN1
+load => andline[6].IN1
+clock => D_flip_flop:U1.clk
+clock => D_flip_flop:U2.clk
+clock => D_flip_flop:U3.clk
+clock => D_flip_flop:U4.clk
+serial => andline[0].IN1
+parallel[0] => andline[1].IN1
+parallel[1] => andline[3].IN1
+parallel[2] => andline[5].IN1
+parallel[3] => andline[7].IN1
+Q[0] <= D_flip_flop:U1.Q
+Q[1] <= D_flip_flop:U2.Q
+Q[2] <= D_flip_flop:U3.Q
+Q[3] <= D_flip_flop:U4.Q
+
+
+|Q8|D_flip_flop:U1
+clk => Q~reg0.CLK
+Din => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Q8|D_flip_flop:U2
+clk => Q~reg0.CLK
+Din => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Q8|D_flip_flop:U3
+clk => Q~reg0.CLK
+Din => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Q8|D_flip_flop:U4
+clk => Q~reg0.CLK
+Din => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
