@@ -1,0 +1,55 @@
+|Q6
+a[0] => x.IN0
+a[0] => adden[0].IN0
+a[0] => adden2[0].IN0
+a[1] => augend[0].IN0
+a[1] => adden[1].IN0
+a[1] => adden2[1].IN0
+a[2] => augend[1].IN0
+a[2] => adden[2].IN0
+a[2] => adden2[2].IN0
+b[0] => x.IN1
+b[0] => augend[0].IN1
+b[0] => augend[1].IN1
+b[1] => adden[0].IN1
+b[1] => adden[1].IN1
+b[1] => adden[2].IN1
+b[2] => adden2[0].IN1
+b[2] => adden2[1].IN1
+b[2] => adden2[2].IN1
+x[0] <= x.DB_MAX_OUTPUT_PORT_TYPE
+x[1] <= adder_3_bit:u1.sum[0]
+x[2] <= adder_3_bit:u2.sum[0]
+x[3] <= adder_3_bit:u2.sum[1]
+x[4] <= adder_3_bit:u2.sum[2]
+x[5] <= adder_3_bit:u2.cout
+
+
+|Q6|adder_3_bit:u1
+a[0] => _.DATAD
+a[1] => _.DATAD
+a[2] => _.DATAD
+b[0] => _.DATAC
+b[1] => _.DATAC
+b[2] => _.DATAC
+cin => _.DATAB
+cout <= _.SUM_OUT
+sum[0] <= _.SUM_OUT
+sum[1] <= _.SUM_OUT
+sum[2] <= _.SUM_OUT
+
+
+|Q6|adder_3_bit:u2
+a[0] => _.DATAD
+a[1] => _.DATAD
+a[2] => _.DATAD
+b[0] => _.DATAC
+b[1] => _.DATAC
+b[2] => _.DATAC
+cin => _.DATAB
+cout <= _.SUM_OUT
+sum[0] <= _.SUM_OUT
+sum[1] <= _.SUM_OUT
+sum[2] <= _.SUM_OUT
+
+
